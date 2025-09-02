@@ -1,16 +1,58 @@
-# um morador deseja saber quantas lampadas sao necessarias
-# p iluminar um comodo de sua casa, fazer um programa que receba
-# potencia da lampada em watts
-# largura e comprimento do comodo em metros 
-# potencia ideal de iluminacao e de 3 watts por metro quadrado
-# cada 3 m² deve haver um bocal p lampada
-# calcular area do comodo 
-# potencia total necessaria
-# qtdd de lampadas necessarias arredondando pra confirmacao
+# atv1
+print('area de um comodo')
+
 while True:  
     try: 
-        potencia_lampada = input('qual potencia da lampada? ')
+        comprimento = float(input('qual comprimento do comodo? '))
         break 
     except: 
-          print('ola')
-          
+        print('digite um numero valido ')
+
+while True:  
+    try:  
+        largura = float(input('qual largura do comodo? '))
+        break 
+    except: 
+        print('digite um numero valido: ')
+
+while True:  
+    try:  
+        area = (comprimento) * (largura)
+        break 
+    except: 
+        print('digite um numero valido: ')
+ 
+print(f'area é de {comprimento} * { largura} = {area}')
+input('quer saber qual potecia total de watts para seu comodo? ')
+
+while True:  
+    try: 
+        watts_por_metro = float(input('quantos watts por metro? '))
+        break 
+    except: 
+        print('digite um numero valido: ')
+     
+while True:  
+    try:  
+        potencia_total = (watts_por_metro) * (area)
+        break 
+    except: 
+        print('digite um numero valido: ')
+
+print(F'potencia total necessaria de : {watts_por_metro} * {area} = {potencia_total}')
+input('quer saber o total de lampadas para iluminacao do seu comodo? ')
+
+while True:  
+    try: 
+        potencia_lampada = float(input('qual potencia da sua lampada? '))
+        break 
+    except: 
+        print('digite um numero valido: ')
+
+while True:  
+    try: 
+        total_lampada = (potencia_total) / (potencia_lampada)
+        break 
+    except: 
+        print('digite um numero valido: ')
+print(total_lampada)
